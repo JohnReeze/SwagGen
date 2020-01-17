@@ -4,6 +4,11 @@ import JSONUtilities
 public struct ComponentObject<T: Component> {
     public let name: String
     public let value: T
+
+    public init(name: String, value: T) {
+        self.name = name
+        self.value = value
+    }
 }
 
 public protocol Component: JSONObjectConvertible {
